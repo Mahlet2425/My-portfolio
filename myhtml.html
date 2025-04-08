@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+    <style> 
+      body {background-color: #f5f1f0; }
+      h1 {color: #ea815e; font-family: 'Brush Script MT', cursive; text-align: center;}
+      h2 { color: #ea815e; font-style: italic; text-transform: uppercase; text-align: center;}
+      h3 {font-style: italic;}
+      li {font-style: italic;}
+      p { font-size: 18px;}
+      .slideshow-container {position: relative; max-width: 100%; margin: auto;}
+      .mySlides {display: none; text-align: center;}
+      img {width: 100%; height: auto;}
+    </style>
+    
+    <div class="profile-name" style="cursor: pointer; text-align: center; font-size: 24px; font-weight: bold;">Mahlet </div>
+    <div class="navbar">
+        <ul> 
+          <li><a href="#about">ABOUT ME</a></li>
+          <li><a href="#work">MY WORK</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#resume">RESUME</a></li>
+        </ul>
+    </div>
+    
+    <h1>Hey! It's Me Mahlet Bekele</h1>
+    <div class="mypic">
+        <img src="myprofile.jpg" alt="m" title="Mahlet Bekele">
+    </div>
+    <h2>This is my portfolio, showcasing ME, MY WORK, and I</h2>
+    
+    <section id="about">
+        <h2>About Me & My Travels</h2>
+        <p>Hi, I'm Mahlet! I'm originally from Ethiopia and currently studying computer science. I have a passion for technology, web design, and exploring the world.</p>
+        
+        <h3>Ethiopia</h3>
+        <div class="slideshow-container" id="ethiopia">
+            <div class="mySlides ethiopia"><img src="ethiopiaMAP.jpg"></div>
+            <div class="mySlides ethiopia"><img src="EthiopiaCHURCH.jpg"></div>
+            <div class="mySlides ethiopia"><img src="lalibela.jpg"></div>
+            <div class="mySlides ethiopia"><img src="abay.jpg"></div>
+        </div>
+        
+        <h3>Minnesota</h3>
+        <div class="slideshow-container" id="minnesota">
+            <div class="mySlides minnesota"><img src="minnesota1.jpg"></div>
+            <div class="mySlides minnesota"><img src="minnesota2.jpg"></div>
+            <div class="mySlides minnesota"><img src="minnesota3.jpg"></div>
+        </div>
+        
+        <h3>DC</h3>
+        <div class="slideshow-container" id="dc">
+            <div class="mySlides dc"><img src="dc1.jpg"></div>
+            <div class="mySlides dc"><img src="dc2.jpg"></div>
+            <div class="mySlides dc"><img src="dc3.jpg"></div>
+        </div>
+    </section>
+    
+    <script>
+        function showSlides(slideshowClass) {
+            let index = 0;
+            function displaySlides() {
+                let slides = document.querySelectorAll('.' + slideshowClass);
+                slides.forEach(slide => slide.style.display = 'none');
+                index++;
+                if (index > slides.length) { index = 1; }
+                slides[index - 1].style.display = 'block';
+                setTimeout(displaySlides, 3000);
+            }
+            displaySlides();
+        }
+        
+        showSlides('ethiopia');
+        showSlides('minnesota');
+        showSlides('dc');
+    </script>
+    
+    <section id="work">
+        <h2>My Work</h2>
+        <p>Check out some of my projects below:</p>
+        <div class="projects">
+            <div class="project-item">
+                <a href="project1.html">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="description">Project 1 - Web Design</div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="project2.html">
+                    <img src="project2.jpg" alt="Project 2">
+                    <div class="description">Project 2 - Java Application</div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="project3.html">
+                    <img src="project3.jpg" alt="Project 3">
+                    <div class="description">Project 3 - Data Visualization</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" target="_blank">View My Resume</a>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: mahlet@example.com</p>
+        <p>LinkedIn: <a href="#">My LinkedIn</a></p>
+    </section>
+    
+    <script src="myjs.js"></script>
+</body>
+</html>
