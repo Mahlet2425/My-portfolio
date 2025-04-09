@@ -1,122 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="mycss.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahlet's Portfolio</title>
+  <link rel="stylesheet" href="mycss.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <style> 
-      body {background-color: #f5f1f0; }
-      h1 {color: #ea815e; font-family: 'Brush Script MT', cursive; text-align: center;}
-      h2 { color: #ea815e; font-style: italic; text-transform: uppercase; text-align: center;}
-      h3 {font-style: italic;}
-      li {font-style: italic;}
-      p { font-size: 18px;}
-      .slideshow-container {position: relative; max-width: 100%; margin: auto;}
-      .mySlides {display: none; text-align: center;}
-      img {width: 100%; height: auto;}
-    </style>
-    
-    <div class="profile-name" style="cursor: pointer; text-align: center; font-size: 24px; font-weight: bold;">Mahlet </div>
-    <div class="navbar">
-        <ul> 
-          <li><a href="#about">ABOUT ME</a></li>
-          <li><a href="#work">MY WORK</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-          <li><a href="#resume">RESUME</a></li>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">My Work</a></li>
+      <li><a href="#contact">Resume & Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Profile Section -->
+<section class="profile">
+    <div class="profile-text">
+      <h1>Mahlet Bekele</h1>
+      <p>Computer Science Major</p>
+      <p>California State University, East Bay</p>
+      <a href="MsB_resume_.pdf" target="_blank">
+        <button>View Resume</button>
+      </a>
+    </div>
+  </section>
+  
+  <!-- About Me Section -->
+  <section id="about-me">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I am passionate about web development and creating beautiful, functional websites. I study Computer Science at California State University, East Bay. I love learning new technologies and building projects that reflect my creativity and vision.</p>
+      </div>
+      <div class="about-pic">
+        <img src="grad11.jpg" alt="About Me" id="about-pic" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-boxes">
+      <div class="experience-box">
+        <h3>Learning Assistant - Chabot College</h3>
+        <ul>
+          <li>Assisted students in understanding Math concepts</li>
+          <li>Led group sessions and provided feedback</li>
+          <li>Collaborated with instructors for effective tutoring</li>
         </ul>
+      </div>
+      <div class="experience-box">
+        <h3>Equity Ambassador - Chabot College</h3>
+        <ul>
+          <li>Promoted inclusive campus initiatives</li>
+          <li>Organized diversity events and workshops</li>
+          <li>Facilitated student engagement across communities</li>
+        </ul>
+      </div>
+      <div class="experience-box">
+        <h3>BLINC Ambassador - CSUEB</h3>
+        <ul>
+          <li>Promoted inclusive campus initiatives</li>
+          <li>Organized diversity events and workshops</li>
+          <li>Facilitated student engagement across communities</li>
+        </ul>
+      </div>
     </div>
-    
-    <h1>Hey! It's Me Mahlet Bekele</h1>
-    <div class="mypic">
-        <img src="myprofile.jpg" alt="m" title="Mahlet Bekele">
+  </section>
+
+  <!-- My Work Section -->
+  <section id="work">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-box">
+        <img src="portfolio.png" alt="Project 1">
+        <h3>My portfolio</h3>
+        <a href="https://github.com/Mahlet2425/My-portfolio.git" target="_blank">GitHub</a>
+      </div>
+      <div class="project-box">
+        <img src="blackjack.png" alt="Project 2">
+        <h3>blackJack game</h3>
+        <a href="https://github.com/bwalldev/CS401_BlackJackGroupProject.git" target="_blank">GitHub</a>
+      </div>
     </div>
-    <h2>This is my portfolio, showcasing ME, MY WORK, and I</h2>
-    
-    <section id="about">
-        <h2>About Me & My Travels</h2>
-        <p>Hi, I'm Mahlet! I'm originally from Ethiopia and currently studying computer science. I have a passion for technology, web design, and exploring the world.</p>
-        
-        <h3>Ethiopia</h3>
-        <div class="slideshow-container" id="ethiopia">
-            <div class="mySlides ethiopia"><img src="ethiopiaMAP.jpg"></div>
-            <div class="mySlides ethiopia"><img src="EthiopiaCHURCH.jpg"></div>
-            <div class="mySlides ethiopia"><img src="lalibela.jpg"></div>
-            <div class="mySlides ethiopia"><img src="abay.jpg"></div>
-        </div>
-        
-        <h3>Minnesota</h3>
-        <div class="slideshow-container" id="minnesota">
-            <div class="mySlides minnesota"><img src="minnesota1.jpg"></div>
-            <div class="mySlides minnesota"><img src="minnesota2.jpg"></div>
-            <div class="mySlides minnesota"><img src="minnesota3.jpg"></div>
-        </div>
-        
-        <h3>DC</h3>
-        <div class="slideshow-container" id="dc">
-            <div class="mySlides dc"><img src="dc1.jpg"></div>
-            <div class="mySlides dc"><img src="dc2.jpg"></div>
-            <div class="mySlides dc"><img src="dc3.jpg"></div>
-        </div>
-    </section>
-    
-    <script>
-        function showSlides(slideshowClass) {
-            let index = 0;
-            function displaySlides() {
-                let slides = document.querySelectorAll('.' + slideshowClass);
-                slides.forEach(slide => slide.style.display = 'none');
-                index++;
-                if (index > slides.length) { index = 1; }
-                slides[index - 1].style.display = 'block';
-                setTimeout(displaySlides, 3000);
-            }
-            displaySlides();
-        }
-        
-        showSlides('ethiopia');
-        showSlides('minnesota');
-        showSlides('dc');
-    </script>
-    
-    <section id="work">
-        <h2>My Work</h2>
-        <p>Check out some of my projects below:</p>
-        <div class="projects">
-            <div class="project-item">
-                <a href="project1.html">
-                    <img src="project1.jpg" alt="Project 1">
-                    <div class="description">Project 1 - Web Design</div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="project2.html">
-                    <img src="project2.jpg" alt="Project 2">
-                    <div class="description">Project 2 - Java Application</div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="project3.html">
-                    <img src="project3.jpg" alt="Project 3">
-                    <div class="description">Project 3 - Data Visualization</div>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="resume.pdf" target="_blank">View My Resume</a>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: mahlet@example.com</p>
-        <p>LinkedIn: <a href="#">My LinkedIn</a></p>
-    </section>
-    
-    <script src="myjs.js"></script>
+  </section>
+
+  <!-- Contact & Resume Section -->
+  <section id="contact">
+    <h2>Resume & Contact</h2>
+    <p>Email: mahlet.bekele12@outlook.com</p>
+    <p>Phone: (510) 605 9737</p>
+    <a href="MsB_resume_.pdf" download>Download Resume</a>
+  </section>
 </body>
 </html>
