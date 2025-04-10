@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: #f4f4f4;
+    background: #ffd3c4;
   }
   
   nav ul {
@@ -26,29 +26,6 @@ body {
     font-weight: bold;
   }
   
-  /*.profile-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background: white;
-  }
-  
-  .profile-pic img {
-    width: 300px;
-   border-radius: 30px;
-    border-style: ridge;
-    transition: transform 0.3s;
-  }
-  
-  .profile-pic img:hover {
-    transform: scale(1.1);
-  }
-  .profile-text {
-    padding: 30px;
-  }*/
-  /* Hero Style - Profile Section */
-/* Full-screen background image */
 .profile {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("myprofile.jpg");
     height: 70vh;
@@ -65,7 +42,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #ffabab;
   }
   
   .profile-text h1 {
@@ -131,6 +108,22 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
   
+  .work-boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .work-box {
+    background: #e3e3e3;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
   .projects {
     display: flex;
     justify-content: space-around;
@@ -149,7 +142,7 @@ body {
   }
   
   .project-box img {
-    width: 100%;
+    width: 200px;
     border-radius: 10px;
   }
   
