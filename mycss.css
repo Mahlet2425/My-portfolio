@@ -6,7 +6,17 @@ body {
     line-height: 1.6;
     background: #ffd3c4;
   }
-  
+  nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #333;
+    padding: 10px 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }  
   nav ul {
     display: flex;
     justify-content: center;
@@ -25,6 +35,13 @@ body {
     text-decoration: none;
     font-weight: bold;
   }
+  nav ul li a:hover {
+    color: #ffabab;
+  }
+  nav ul li a.active {
+    border-bottom: 2px solid #ffabab;
+  }
+  
   
 .profile {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("myprofile.jpg");
@@ -80,6 +97,13 @@ body {
     background: #fff;
     align-items: center;
     justify-content: space-around;
+  }
+  /*Mobile Responsiveness*/
+  @media (max-width: 768px) {
+    .about-container, .experience-boxes, .work-boxes, .projects {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   
   .about-pic img {
@@ -152,5 +176,5 @@ body {
     background: #ddd;
   }
   
-  /* script.js */
+
  
